@@ -1,4 +1,6 @@
-# gif search
+# Gif Search
+
+![gif-search](https://github.com/HederAlves/gif-search/assets/83372052/dbeb5b4b-a495-4689-85bb-adec2f0a566d)
 
 ### Frontend Developer Challenge
 
