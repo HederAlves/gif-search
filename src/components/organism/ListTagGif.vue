@@ -66,4 +66,3 @@ const closeModal = () => {
   showModal.value = false;
 };
 </script>
-
