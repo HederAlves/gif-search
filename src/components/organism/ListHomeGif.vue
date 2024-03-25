@@ -4,7 +4,7 @@
       <BaseSearch v-model="query" @filter="updateFilter" />
   
       <q-list>
-        <q-item v-for="gif in filteredGif" :key="gif.id" @click="openModal(gif)">
+        <q-item v-for="gif in filteredGif" :key="gif.id" clickable @click="openModal(gif)">
           <q-item-section avatar>
             <q-avatar>
               <img :src="getGifUrl(gif)" />
