@@ -37,24 +37,27 @@ import { useGifStore } from "../../store/giphy";
 import { ref, computed, onMounted } from 'vue';
 
 const query = ref("");
-const gifStore = useGifStore().gif;
 const showModal = ref(false);
 const modalGifUrl = ref('');
+
+onMounted(async () => {
+  await useGifStore().fetchGif();
+});
 
 const getGifUrl = (gif) => {
   return gif.media[0].mediumgif.url;
 };
 
-onMounted(() => {
-  useGifStore().fetchGif();
+const gifStore = computed(() => {
+  return useGifStore().gif;
 });
 
 const filteredGif = computed(() => {
   const queryValue = query.value.toLowerCase().trim();
   if (!queryValue) {
-    return gifStore;
+    return gifStore.value;
   } else {
-    return gifStore.filter(gif => gif.content_description.toLowerCase().includes(queryValue));
+    return gifStore.value.filter(gif => gif.content_description.toLowerCase().includes(queryValue));
   }
 });
 
