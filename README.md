@@ -7,7 +7,7 @@
 This is a simple challenge to test your skills in building web pages. SGBr services mainly use Vue 3, Quasar, Tailwind CSS, and Pinia technologies.
 
 What to do:
-Create a screen consuming data from the API at https://developers.giphy.com/ with infinite scroll of gifs, a search option, and an expanded view of the selected gif.
+Create a screen consuming data from the API at https://tenor.com/gifapi/ with infinite scroll of gifs, a search option, and an expanded view of the selected gif.
 
 Feel free to assemble the screen, and if you prefer, choose a theme of your choice to filter the gifs.
 
