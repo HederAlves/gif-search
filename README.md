@@ -1,31 +1,39 @@
 # Gif Search
 
+<div align="center">
+
 ![gif-search](https://github.com/HederAlves/gif-search/assets/83372052/dbeb5b4b-a495-4689-85bb-adec2f0a566d)
 
-### Frontend Developer Challenge
+![Badge](https://img.shields.io/badge/Developer-HederAlves-%237159c1?style=for-the-badge&logo=ghost)
+![Badge under development](http://img.shields.io/static/v1?label=STATUS&message=VERSION-1.0%20AVAILABLE&color=GREEN&style=for-the-badge)
 
-This is a simple challenge to test your skills in building web pages. SGBr services mainly use Vue 3, Quasar, Tailwind CSS, and Pinia technologies.
+## Technologies
 
-What to do:
-Create a screen consuming data from the API at https://tenor.com/gifapi/ with infinite scroll of gifs, a search option, and an expanded view of the selected gif.
+![Badge](https://img.shields.io/badge/Quasar-1976D2?style=for-the-badge&logo=quasar&logoColor=white)
+![Badge](https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![Badge](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Badge](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)
+![Badge](https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white)
+![Badge](https://img.shields.io/badge/Pinia-%237159c1?style=for-the-badge&logo=ghost)
+![Badge](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Badge](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Badge](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white)
 
-Feel free to assemble the screen, and if you prefer, choose a theme of your choice to filter the gifs.
+</div>
 
-Requirements:
-• Provide a README file with usage instructions (how to run, etc.)
+## About the app
 
-Recommendations:
-• Tests, tests, and tests
-• Code in English (methods, classes, variables, etc.)
+This application was developed to consume the gifs API: https://tenor.com/gifapi/
 
-Evaluation:
-• Organization: structure the code and the project in a clear way
-• Good programming practices
+Within the application you can select gifs by tags or by general mode on the home page
+The app also has a filter to help you select the gif.
 
-Delivery:
-You should submit this challenge in a public repository on Git and send the link via WhatsApp
+The app is available for all screen sizes:
+Desktop | Tablet | Mobile
 
-## Install the dependencies
+---
+
+### Install the dependencies
 
 ```bash
 yarn
