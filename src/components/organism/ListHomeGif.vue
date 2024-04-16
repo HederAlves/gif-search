@@ -15,9 +15,9 @@
           </q-item-section>
   
           <q-item-section side>
-            <router-link :to="getGifUrl(gif)">
+            <q-button>
               <q-icon name="open_in_new" />
-            </router-link>
+            </q-button>
           </q-item-section>
         </q-item>
       </q-list>
@@ -45,7 +45,7 @@ onMounted(async () => {
 });
 
 const getGifUrl = (gif) => {
-  return gif.media[0].mediumgif.url;
+  return gif.media[0].gif.url;
 };
 
 const gifStore = computed(() => {
