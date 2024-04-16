@@ -1,13 +1,13 @@
 <template>
   <q-page>
     <section>
-      <BaseSearch v-model="query" @filter="updateFilter" />
+      <BaseSearch v-model="query" />
   
       <q-list>
         <q-item v-for="gif in filteredGif" :key="gif.id" clickable @click="openModal(gif)">
           <q-item-section avatar>
             <q-avatar>
-              <img :src="getGifUrl(gif)" />
+              <img :src="gif.media[0].mediumgif.url" />
             </q-avatar>
           </q-item-section>
           <q-item-section>
@@ -31,47 +31,37 @@
 </template>
 
 <script setup>
-import BaseModal from "../atomic/BaseModal.vue";
+import { useGifStore } from "../../store/app";
+import { ref, onMounted, computed } from 'vue';
 import BaseSearch from "../atomic/BaseSearch.vue";
-import { useGifStore } from "../../store/giphy";
-import { ref, computed, onMounted } from 'vue';
+import BaseModal from "../atomic/BaseModal.vue";
 
-const query = ref("");
+const store = useGifStore();
+const gifHome = ref([]);
+const query = ref('');
 const showModal = ref(false);
 const modalGifUrl = ref('');
 
 onMounted(async () => {
-  await useGifStore().fetchGif();
-});
-
-const getGifUrl = (gif) => {
-  return gif.media[0].gif.url;
-};
-
-const gifStore = computed(() => {
-  return useGifStore().gif;
+  await store.fetchGif();
+  gifHome.value = store.gif;
 });
 
 const filteredGif = computed(() => {
   const queryValue = query.value.toLowerCase().trim();
   if (!queryValue) {
-    return gifStore.value;
+    return gifHome.value;
   } else {
-    return gifStore.value.filter(gif => gif.content_description.toLowerCase().includes(queryValue));
+    return gifHome.value.filter(gif => gif.content_description.toLowerCase().includes(queryValue));
   }
 });
 
-const updateFilter = (value) => {
-  query.value = value.trim();
-}
-
 const openModal = (gif) => {
-  modalGifUrl.value = getGifUrl(gif);
+  modalGifUrl.value = gif.media[0].mediumgif.url;
   showModal.value = true;
 };
 
 const closeModal = () => {
   showModal.value = false;
-  modalGifUrl.value = null;
 };
 </script>
