@@ -15,9 +15,9 @@
           </q-item-section>
   
           <q-item-section side>
-            <router-link :to="tag.path">
+            <q-button>
               <q-icon name="open_in_new" />
-            </router-link>
+            </q-button>
           </q-item-section>
         </q-item>
       </q-list>
